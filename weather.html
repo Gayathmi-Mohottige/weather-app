@@ -1,0 +1,84 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css"> 
+</head>
+<body class="body">
+    <div class="main-card">
+        <div class="search">
+            <input id="cityInput" placeholder="Search city">
+            <button id="searchBtn"><img src="search.png"></button>        
+        </div>
+        <div id="start-screen">
+            <img src="location-man.png">
+            <h2>Search any city</h2>
+            <h4>Find out the weather around the world!</h4>
+        </div>
+        <div id="error">
+        <img src="error.png">
+            <h3>Invalid city name</h3>
+        </div>
+        <div id="main-weather-info">
+        <div id="location">
+            <img src="location.png">
+            <h3 id="city">Sri Lanka</h3>
+            <h4 id="today">Sat,14 Sep</h4>
+        </div>
+        
+        <div id="weather">
+            <img id="today-weather-img"src="clouds.png">
+            <div>
+            <h2 id="today-temperature">30°c</h2>
+            <h3 id="weather-name">Clouds</h3>
+            </div>
+        </div>
+        <div id="other-info">
+            <div id="col">
+                <img src="humidity.png">
+                <div>
+                    <h4>Humidity</h4>
+                    <h4 id="humidityText">74%</h4>
+                </div>
+            </div>
+            <div id="col">
+                <img src="wind.png">
+                <div>
+                    <h4>Wind Speed</h4>
+                    <h4 id="windText">4.12 m/s</h4>
+                </div>
+            </div>
+        </div>
+        <div id="next-five-days">
+            <div class="card">
+                <h3 id="date">sep 15</h3>
+                <img src="clouds.png">
+                <h4 id="temperature">30°c</h4>
+            </div>
+            <div class="card">
+                <h3 id="date">sep 16</h3>
+                <img src="clouds.png">
+                <h4 id="temperature">30°c</h4>
+            </div>
+            <div class="card">
+                <h3 id="date">sep 17</h3>
+                <img src="clouds.png">
+                <h4 id="temperature">30°c</h4>
+            </div>
+            <div class="card">
+                <h3 id="date">sep 18</h3>
+                <img src="clouds.png">
+                <h4 id="temperature">30°c</h4>
+            </div>
+            <div class="card">
+                <h3 id="date">sep 19</h3>
+                <img src="clouds.png">
+                <h4 id="temperature">30°c</h4>
+            </div>
+        </div>
+        </div>
+    </div>
+<script src="index.js"></script>   
+</body>
+</html>
