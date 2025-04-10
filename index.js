@@ -167,3 +167,4 @@ function updateForcastItems(weatherData) {
 
     forcastContainer.insertAdjacentHTML('beforeend', forcastItem)
 }
+

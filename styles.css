@@ -1,44 +1,56 @@
+/* General Body Styles */
 body {
     background-image: url("cloudsBG.jpg");
+    background-size: cover;
+    background-position: center;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     display: flex;
-    transition: background-image 0.5s ease-in-out; 
-    
-
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    transition: background-image 0.5s ease-in-out;
 }
+
+/* Main Card Styles */
 .main-card {
-    width: 80%;
+    width: 90%;
     max-width: 470px;
-    background: linear-gradient(
-        to bottom,  /* Gradient direction: from top to bottom */
-        rgba(200, 200, 200, 0.3),  /* Very light grey with 30% opacity at the top */
-        rgba(100, 100, 100, 0.7)   /* Darker grey with 70% opacity at the bottom */
-    );
+    background: linear-gradient(to bottom,
+        rgba(200, 200, 200, 0.3),
+        rgba(100, 100, 100, 0.7));
     color: #fff;
-    margin: 0 auto 0;
     border-radius: 20px;
-    padding: 20px 20px;
+    padding: 25px 20px;
     text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
+/* Search Bar */
 .search {
-    width: 470px;
+    width: 100%;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 16px;
+    margin-bottom: 20px;
 }
 
 .search input {
+    flex: 1;
     border: 0;
     outline: 0;
-    background:#ebfffc ;
+    background: #ebfffc;
     color: #555;
     padding: 10px 25px;
     height: 60px;
     border-radius: 30px;
-    flex: 1;
-    margin-right: 16px;
     font-size: 18px;
-
+    max-width: 340px;
 }
 
 .search button {
@@ -49,146 +61,184 @@ body {
     height: 60px;
     width: 60px;
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .search button img {
     width: 30px;
 }
 
+/* Start Screen */
+#start-screen {
+    text-align: center;
+}
+
+#start-screen img {
+    width: 150px;
+    margin-top: 60px;
+}
+
+#start-screen h2,
+#start-screen h4 {
+    margin: 10px 0;
+}
+
+/* Error Section */
+#error {
+    display: none;
+    text-align: center;
+}
+
+#error img {
+    width: 100px;
+    margin-top: 50px;
+}
+
+/* Weather Info Section */
+#main-weather-info {
+    display: none;
+    width: 100%;
+}
+
+/* Location */
 #location {
-    padding-top: 30px;
-    width: 470px;
     display: flex;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 10px;
 }
 
 #location img {
-    width: 40px;
-    padding: 0;
-    margin-right: 10px;
+    width: 30px;
 }
 
 #city {
-    font-size: 30px;
-    margin: 0;
-    
-}
-
-#today {
-    font-size: 20px;
-    margin-left: 150px;
-}
-
-#weather {
-    display: flex;
-    align-items: center;
-    margin-left:120px;
-}
-
-#weather img {
-    height: 120px;
-    width: 120px;
-}
-
-#today-temperature {
-    font-size: 60px;
-    margin: 0;
-}
-
-#weather-name {
     font-size: 25px;
     margin: 0;
 }
 
-#other-info {
+#today {
+    font-size: 16px;
+    margin: 0;
+}
+
+/* Current Weather */
+#weather {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    padding: 0 20px;
-    margin-top: 50px;
+    justify-content: center;
+    margin: 20px 0;
+    gap: 15px;
+}
+
+#weather img {
+    height: 250px;
+    width: 250px;
+}
+
+#today-temperature {
+    font-size: 50px;
+    margin: 0;
+}
+
+#weather-name {
+    font-size: 20px;
+    margin: 0;
+}
+
+/* Other Info Cards */
+#other-info {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    gap: 15px;
+    flex-wrap: wrap;
 }
 
 #col {
     display: flex;
     align-items: center;
-    text-align: left;
-    background: rgba(136, 136, 136, 0.379);
-    padding: 20px;
-    border-radius: 20px;
+    background: rgba(136, 136, 136, 0.4);
+    padding: 10px;
+    border-radius: 15px;
+    gap: 10px;
+    min-width: 140px;
+    justify-content: center;
 }
+
 #col img {
-    height: 60px;
-    width: 60px;
-    margin-right: 10px;
-    
+    height: 40px;
+    width: 40px;
 }
 
 #col h4 {
     margin: 0;
-    font-size: 17px;
+    font-size: 14px;
+    color: #fff;
+    text-align: left;
 }
 
+/* Next 5 Days Forecast */
 #next-five-days {
     display: flex;
-    gap: 15px;
-    overflow: hidden;
-    overflow-x: scroll;
-    padding-bottom: 15px;
-    padding-top: 30px;
+    justify-content: center; /* This centers the cards */
+    gap: 10px;
+    overflow-x: auto;
+    padding: 20px 0 10px;
+    margin-top: 30px;
+    scrollbar-width: thin;
 }
+
 
 .card {
     min-width: 85px;
-    max-width: 85px;
-    background: rgb(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.1);
     display: flex;
     flex-direction: column;
-    gap: 8px;
-    padding: 10px;
-    text-align: center;
     align-items: center;
-    border-radius: 20px;
+    gap: 6px;
+    padding: 10px 5px;
+    text-align: center;
+    border-radius: 15px;
+    flex-shrink: 0;
 }
 
-.card img{
+.card img {
     width: 40px;
     height: 40px;
 }
 
-/* Apply styles to the scrollbar */
+.card h3,
+.card h4 {
+    font-size: 14px;
+    margin: 0;
+    color: #fff;
+}
+
+/* Scrollbar Customization */
 ::-webkit-scrollbar {
-    width: 12px; /* Width of the scrollbar */
+    height: 8px;
 }
 
 ::-webkit-scrollbar-track {
-    background: rgba(0, 0, 0, 0.1); /* Background color of the track */
-    border-radius: 10px; /* Roundness of the track */
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb {
-    background:linear-gradient(
+    background: linear-gradient(
         rgba(176, 176, 176, 0.8),
-        rgba(255, 255, 255, 0.8)       
-    ); /* Gradient color of the thumb */
-    border-radius: 10px; /* Roundness of the thumb */
-    border: 3px solid rgba(191, 191, 191, 0.1); /* Border around the thumb */
+        rgba(255, 255, 255, 0.8)
+    );
+    border-radius: 10px;
+    border: 2px solid rgba(191, 191, 191, 0.1);
 }
 
-#main-weather-info {
-    display: none;
-}
 
-#error {
-    display: none;
-}
-
-#start-screen img{
-    padding-top: 100px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 
 
 
